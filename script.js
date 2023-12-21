@@ -175,3 +175,45 @@ document.getElementById('modal').addEventListener('click', function() {
   this.style.display = 'none';
 });
 
+// Create a white loading screen
+const loadingScreen = document.createElement("div");
+loadingScreen.style.position = "fixed";
+loadingScreen.style.top = "0";
+loadingScreen.style.left = "0";
+loadingScreen.style.width = "100%";
+loadingScreen.style.height = "100%";
+loadingScreen.style.backgroundColor = "white";
+loadingScreen.style.display = "flex";
+loadingScreen.style.justifyContent = "center";
+loadingScreen.style.alignItems = "center";
+loadingScreen.style.zIndex = "9999";
+
+// Create a spinning spinner
+const spinner = document.createElement("div");
+spinner.style.border = "4px solid rgba(0, 0, 0, 0.3)";
+spinner.style.borderTop = "4px solid #3498db";
+spinner.style.borderRadius = "50%";
+spinner.style.width = "40px";
+spinner.style.height = "40px";
+spinner.style.animation = "spin 1s linear infinite";
+
+// Append the spinner to the loading screen
+loadingScreen.appendChild(spinner);
+
+// Append the loading screen to the body of the document
+document.body.appendChild(loadingScreen);
+
+// Simulate a delay for demonstration purposes (you can replace this with your actual loading logic)
+setTimeout(function () {
+    // Remove the loading screen when the content is ready
+    loadingScreen.style.display = "none";
+}, 2000); // Change 2000 to the desired loading time in milliseconds
+
+// Define the CSS animation
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}`;
+document.head.appendChild(style);
