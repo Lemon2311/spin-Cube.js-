@@ -203,11 +203,11 @@ loadingScreen.appendChild(spinner);
 // Append the loading screen to the body of the document
 document.body.appendChild(loadingScreen);
 
-// Simulate a delay for demonstration purposes (you can replace this with your actual loading logic)
+//Add delay if needed, or for simulation
 setTimeout(function () {
     // Remove the loading screen when the content is ready
     loadingScreen.style.display = "none";
-}, 2000); // Change 2000 to the desired loading time in milliseconds
+}, 0); //desired loading time in milliseconds
 
 // Define the CSS animation
 const style = document.createElement("style");
