@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+canvas {
+  display: block;
+}
+
+.slider-container {
+  width: 300px;
+  margin: 50px auto;
+}
+
+/* Style the slider */
+input[type=range] {
+  width: 100%;
+}
+
+.slider-container1 {
+  width: 300px;
+  margin: 50px auto;
+}
+
+.slider-container2 {
+  width: 300px;
+  margin: 50px auto;
+}
