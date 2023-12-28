@@ -1,6 +1,6 @@
-import { Cube } from './cube.js';
+import { Cube } from './cube.js';//import cube class from cube.js file
 
-window.addEventListener('DOMContentLoaded', () => {
-    const cube = new Cube(document);
-    cube.changeAngularVelocity(0.1, 0.1, 0.1);
-});
+const cube = new Cube(document);//create new cube object
+
+cube.changeAngularVelocity(0.1, 0.1, 0.1);//change angular velocity of cube
+
