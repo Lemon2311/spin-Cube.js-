@@ -1,5 +1,5 @@
 spin(cube).js is a library that creates a spining cube with angular velocity control for 3 axis that appends to the Html element passed as argument when using new Cube(element); like so<br>
-![cubeExample](https://github.com/Lemon2311/spin-Cube.js-/assets/63803133/52546086-ef40-4c73-8d97-5346b585b0c3)
+![exampleCubeSpin](https://github.com/Lemon2311/spin-Cube.js-/assets/63803133/2b0037e7-ce96-4193-8f0f-2b2697df2604)
 <br>
 Make sure to include type="module" when linking the script.js containing the Cube instance like so<br>
 ![reference](https://github.com/Lemon2311/spin-Cube.js-/assets/63803133/30f155b1-e5b1-4164-8270-5c170115c163)
