@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family:Rubik Doodle Shadow;
+}
+
+canvas {
+  display: block;
+}
+
+.slider-container {
+  width: 300px;
+  margin: 50px auto;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+.slider-container1 {
+  width: 300px;
+  margin: 50px auto;
+}
+
+.slider-container2 {
+  width: 300px;
+  margin: 50px auto;
+}
+
+p{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal {
+  position: relative;
+  bottom: -800px;
+  right: 20px;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 150px;
+  z-index: 1000;
+}
+
