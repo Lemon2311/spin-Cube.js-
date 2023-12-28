@@ -1,6 +1,6 @@
 export class Cube {
-    constructor(document) {
-        this.document = document;
+    constructor(target) {
+        this.container = target instanceof HTMLDocument ? target.body : target;
         this.COLOR_BG = "white";
         this.COLOR_CUBE = "black";
         this.SPEED_X = 0; // Rotation speed on X-axis
@@ -18,13 +18,13 @@ export class Cube {
 
     init() {
         // Set up the canvas and context
-        this.canvas = this.document.createElement("canvas");
-        this.document.body.appendChild(this.canvas);
+        this.canvas = this.container.ownerDocument.createElement("canvas");
+        this.container.appendChild(this.canvas);
         this.ctx = this.canvas.getContext("2d");
 
         // Dimensions
-        this.h = this.document.documentElement.clientHeight;
-        this.w = this.document.documentElement.clientWidth;
+        this.h = this.container.clientHeight;
+        this.w = this.container.clientWidth;
         this.canvas.height = this.h;
         this.canvas.width = this.w;
 
@@ -47,13 +47,13 @@ export class Cube {
             new this.POINT3D(this.cx - this.size, this.cy - this.size, this.cz + this.size),
             new this.POINT3D(this.cx + this.size, this.cy - this.size, this.cz + this.size),
             new this.POINT3D(this.cx + this.size, this.cy + this.size, this.cz + this.size),
-            new this.POINT3D(this.cx - this.size, this.cy + this.size, this.cz + this.size),
+            new this.POINT3D(this.cx - this.size, this.cy + this.size, this.cz + this.size)
         ];
 
         this.edges = [
             [0, 1], [1, 2], [2, 3], [3, 0], // back face
             [4, 5], [5, 6], [6, 7], [7, 4], // front face
-            [0, 4], [1, 5], [2, 6], [3, 7], // connecting sides
+            [0, 4], [1, 5], [2, 6], [3, 7]  // connecting sides
         ];
 
         // Start the animation loop
@@ -127,5 +127,4 @@ export class Cube {
         this.SPEED_Y = y;
         this.SPEED_Z = z;
     }
-
 }
