@@ -127,4 +127,16 @@ export class Cube {
         this.SPEED_Y = y;
         this.SPEED_Z = z;
     }
+
+    changeXAxisAngularVelocity(x) {
+        this.SPEED_X = x;
+    }
+
+    changeYAxisAngularVelocity(y) {
+        this.SPEED_Y = y;
+    }
+
+    changeZAxisAngularVelocity(z) {
+        this.SPEED_Z = z;
+    }
 }
